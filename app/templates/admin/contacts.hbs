@@ -1,0 +1,13 @@
+<h2>Contacts</h2>
+
+{{#each model as |contact|}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{contact.email}}</h3>
+    </div>
+    <div class="panel-body">
+      <p>Message: {{contact.message}}</p>
+      <button class="btn btn-danger btn-xs" {{action "deleteContact" contact}}>Delete</button>
+    </div>
+  </div>
+{{/each}}
